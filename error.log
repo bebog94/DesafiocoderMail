@@ -1,0 +1,157 @@
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T00:46:48.761Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:28:17.134Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:28:17.136Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:28:17.429Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:28:17.429Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:28:50.588Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:28:50.590Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:30:03.703Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:30:03.705Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:32:55.482Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:32:55.484Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:32:58.841Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:32:58.842Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:36:27.103Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:36:27.106Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:37:10.934Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:37:10.936Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:38:06.013Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:38:06.015Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:40:39.250Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:40:39.251Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:40:53.435Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:40:53.437Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:40:57.015Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:40:57.016Z'
+}
+{
+  message: 'Ejemplo de fatal',
+  level: 'fatal',
+  timestamp: '2024-01-16T02:41:08.330Z'
+}
+{
+  message: 'Ejemplo de error',
+  level: 'error',
+  timestamp: '2024-01-16T02:41:08.332Z'
+}
+{
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.gcmvsft.mongodb.net',
+  level: 'error',
+  message: 'Error al conectar con la Base de datos querySrv ETIMEOUT _mongodb._tcp.cluster0.gcmvsft.mongodb.net',
+  stack: 'Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.gcmvsft.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:252:17)',
+  timestamp: '2024-01-24T01:25:44.582Z'
+}
+{
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'queryTxt',
+  hostname: 'cluster0.gcmvsft.mongodb.net',
+  level: 'error',
+  message: 'Error al conectar con la Base de datos queryTxt ETIMEOUT cluster0.gcmvsft.mongodb.net',
+  stack: 'Error: queryTxt ETIMEOUT cluster0.gcmvsft.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:252:17)',
+  timestamp: '2024-01-24T01:38:22.495Z'
+}
