@@ -16,6 +16,8 @@ import config from "./config.js"
 import loggerTest from "./routes/loggerTest.js"
 import { errorMiddleware } from './middleware/error.middleware.js';
 import { logger } from './utils/logger.js';
+import { swaggerSetup} from "./utils/swagger.js"
+import swaggerUi from "swagger-ui-express"
 
 
 const PORT= config.port
@@ -68,6 +70,7 @@ app.use('/api/messages', messageRouter);
 app.use("/", viewsRouter);
 app.use("/loggerTest",loggerTest);
 app.use(errorMiddleware)
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup))
 
 
 //localhost
