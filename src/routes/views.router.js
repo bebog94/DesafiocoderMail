@@ -20,6 +20,24 @@ router.get("/signup", async (req, res) => {
   res.render("signup");
 });
 
+
+router.get("/restore", (req, res) => {
+  res.render("restore", {style: "restore"});
+});
+
+
+router.get("/restart/:id", (req, res) => {
+  if (req.cookies.tokencito){
+    const {id} = req.params  
+    res.render("restart", {style: "restart", id});
+  } else {
+    console.log("No hay token en las cookies. Redirigiendo manualmente a /restore");
+    return res.redirect("/restore")
+  }
+});
+
+
+
 router.get("/profile", async (req, res) => {
   if (!req.session.passport) {
     return res.redirect("/login");
@@ -104,5 +122,9 @@ router.get("/error", (req, res) => {
       res.status(500).json({ error: error.message });
     }
   });
+
+
+
+
  
 export default router;
