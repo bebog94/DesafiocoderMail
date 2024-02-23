@@ -39,6 +39,8 @@ class ProductsManager {
         hasNextPage: result.hasNextPage,
         prevLink: result.hasPrevPage ? `/products?page=${result.prevPage}` : null,
         nextLink: result.hasNextPage ? `/products?page=${result.nextPage}` : null,
+        limit: limit,
+        sort: sort,
       };
       return response;
 

@@ -11,7 +11,7 @@ export const avoidDeletion = () => {
             }
 
             if (req.user && req.user.role === 'PREMIUM' && product.owner != req.user._id) {
-                return res.json({ message: 'You can\'t delete a product that you don\'t own' });
+                return res.status(403).json({ message: 'You can\'t delete a product that you don\'t own' });
             }                        
             next();
         } catch (error) {

@@ -34,15 +34,16 @@ export const createOneProduct = async (req, res, next) => {
     const { title, description, price, code, stock, category } = req.body;
 
     if (!title || !description || !price || !code || !stock || !category) {
-        return CustomError.generateError(ErrorMessages.MISSING_DATA,400, ErrorName.MISSING_DATA);
+        return CustomError.generateError(ErrorMessages.MISSING_DATA, 400, ErrorName.MISSING_DATA);
     }
     try {
-        const response = await productsService.createOne(req.body);
+        const userId = req.user._id; // Asumiendo que el ID del usuario está disponible en req.user
+        const response = await productsService.createOne({ ...req.body, owner: userId });
         res.status(200).json({ message: "Producto created", response });
     } catch (error) {
         next(error);
     }
-}
+};
 
 export const deleteOneProdAll = async (req, res, next) => {
     try {
