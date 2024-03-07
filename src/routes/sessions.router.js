@@ -71,10 +71,21 @@ router.post("/login",passport.authenticate("login",{failureMessage: true,failure
   })
 
 
-router.get("/signout", (req, res) => {
-  req.session.destroy(() => {
-    res.redirect("/login");
-  });
+router.get("/signout", async (req, res) => {
+
+  try {
+    const user = req.user;
+    if (user) {
+      user.last_connection = new Date();
+      await user.save();
+      req.session.destroy(() => {
+        res.redirect("/login");
+      });
+    }
+  } catch (error) {
+    console.error("Error during signout:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 router.post("/restart/:id", async (req, res) => { 

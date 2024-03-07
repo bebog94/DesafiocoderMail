@@ -7,6 +7,7 @@ import { hashData, compareData } from "./utils/utils.js";
 import dotenv from 'dotenv';
 import { cartsManager } from "./DAL/dao/managers/cartsManager.js";
 import UsersRequest from "./DAL/dtos/user-request.dto.js";
+import { now } from "mongoose";
 dotenv.config();
 
 const { SECRETJWT } = process.env;
@@ -39,7 +40,8 @@ passport.use("signup", new LocalStrategy(
       const createdCart = await cartsManager.createCart()
       const userDto = new UsersRequest({ ...req.body, 
         cart: createdCart._id,
-        password: hashedPassword });
+        password: hashedPassword,
+     });
 
      let createdUser
       if (email === admin.email) {
@@ -80,7 +82,9 @@ passport.use("login", new LocalStrategy(
           if(!isPassValid){
               return done(null, false, {message: 'Incorrect username or password'})
           }
-      }      
+      } 
+      user.last_connection= new Date();   
+      await user.save();  
       done(null, user)      
   }catch (error){
       done(error)

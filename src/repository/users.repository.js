@@ -29,4 +29,25 @@ export default class UsersRepository {
       const createdUser = await usersManager.createUser(userDto);
       return createdUser;
     }    
+    async saveUserDocumentsService ({ id, dni, address, bank }) {
+      const savedDocuments = await uManager.updateUser(id, {
+        documents: [
+          ...dni?[{
+              name: "dni",
+              reference: dni[0].path,
+          }]:[],
+          ...address?[{
+              name: "address",
+              reference: address[0].path,
+          }]:[],
+          ...bank?[{
+              name: "bank",
+              reference: bank[0].path,
+          }]:[],
+        ],
+      });
+      return savedDocuments;
+    }
+
+
 }
